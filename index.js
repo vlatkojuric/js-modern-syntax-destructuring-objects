@@ -48,6 +48,8 @@ export const person = {
   lastName: "Main",
   age: 24,
   firstName: "Alex",
+  person: true,
 };
-export const { lastName: personLastName = "Main" } = person;
-export const moreInformation = { age: 24, firstName: "Alex" };
+//moreInformation get the rest of the object that we didnt take out,here in example we took out last name,and all the other objects in the variable are in the ...moreInformation,and we acces them via dot notaion,example moreInformation.age
+export const { lastName: personLastName, ...moreInformation } = person;
+console.log(moreInformation.person);
